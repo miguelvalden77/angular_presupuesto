@@ -1,0 +1,7 @@
+<h2>Ingresa presupuesto</h2>
+
+<section>
+    <p *ngIf="cantidad < 0">La cantidad debe ser mayor que 0</p>
+    <input type="number" placeholder="ingresa presupuesto" [(ngModel)]="cantidad">
+    <button (click)="agregar()">Validar</button>
+</section>
