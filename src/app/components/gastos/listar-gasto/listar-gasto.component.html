@@ -1,1 +1,10 @@
-<p>listar-gasto works!</p>
+<section>
+    <h3>Presupuesto {{presupuesto}}</h3>
+    <h3>Restante {{restante}}</h3>
+    <ng-container *ngIf="gastosList.length > 0">
+        <div *ngFor="let gasto of gastosList">
+            <p>{{gasto.gasto}}</p>
+            <p>{{gasto.cantidad}}</p>
+        </div>
+    </ng-container>
+</section>

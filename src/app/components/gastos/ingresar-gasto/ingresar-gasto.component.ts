@@ -15,8 +15,7 @@ export class IngresarGastoComponent {
 
   addGasto() {
     if (this.gasto.trim() == "" || this.cantidad <= 0 || this.cantidad > this._presupuestoService.presupuesto) return
-    this._presupuestoService.newGasto(this.cantidad)
-    console.log({ gasto: this.gasto, cantidad: this.cantidad, presupuesto: this._presupuestoService.presupuesto, restante: this._presupuestoService.restante })
+    this._presupuestoService.newGasto({ gasto: this.gasto, cantidad: this.cantidad })
 
     this.gasto = ""
     this.cantidad = 0
